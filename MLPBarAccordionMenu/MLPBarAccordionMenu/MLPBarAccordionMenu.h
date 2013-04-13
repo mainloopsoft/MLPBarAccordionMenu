@@ -15,14 +15,14 @@
 
 @end
 
+typedef void (^MLPBarAccordionMenuBlock)(NSIndexPath* indexPath);
 
-@interface MLPBarAccordionMenu : UICollectionView<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface MLPBarAccordionMenu : UICollectionView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSArray *menuItems;
+@property (readwrite, nonatomic, copy) MLPBarAccordionMenuBlock selectedBlock;
 
 - (id)initWithItems:(NSArray*)menuItems;
-
-- (id)initWithDelegate:(id<UICollectionViewDelegate>)delegate;
 
 - (void)toggleBetweenNavigationBar:(UINavigationController*)navigationController andView:(UIView*)view;
 

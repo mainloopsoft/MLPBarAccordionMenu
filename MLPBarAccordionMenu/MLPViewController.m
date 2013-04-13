@@ -50,6 +50,13 @@
     
     menu = [[MLPBarAccordionMenu alloc] initWithItems:@[calendar, camera, cloud, refresh]];
 
+    MLPBarAccordionMenuBlock block = ^(NSIndexPath *index) {
+        //Do something here
+        
+        [menu hide];
+    };
+    
+    menu.selectedBlock = block;
     [self.navigationItem setRightBarButtonItem:self.toggleButton];
 }
 

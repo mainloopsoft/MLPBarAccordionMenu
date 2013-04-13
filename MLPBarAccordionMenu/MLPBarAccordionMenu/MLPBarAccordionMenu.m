@@ -38,6 +38,7 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
     self = [super initWithFrame:CGRectZero collectionViewLayout:aFlowLayout];
     if (self) {
         self.dataSource = self;
+        self.delegate = self;
         [self registerNib:[UINib nibWithNibName:@"MLPBarAccordionCell" bundle:nil] forCellWithReuseIdentifier:cellIdentifier];
     }
     
@@ -45,16 +46,6 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
     self.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.layer.shadowOffset = CGSizeMake(0,3);
     self.layer.shadowOpacity = 0.8;
-    
-    return self;
-}
-
-- (id)initWithDelegate:(id<UICollectionViewDelegate>)delegate
-{
-    self = [self init];
-    if (self) {
-        self.delegate = delegate;
-    }
     
     return self;
 }
@@ -91,10 +82,10 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     
-//    if (![UIApplication sharedApplication].statusBarHidden){
-//        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-//        navBarHeight += statusBarHeight;
-//    }
+    if (![UIApplication sharedApplication].statusBarHidden){
+        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+        navBarHeight += statusBarHeight;
+    }
     
     self.frame = CGRectMake(0, -height + navBarHeight, screenWidth, height);
     [navigationController.view insertSubview:self belowSubview:navBar];
@@ -115,15 +106,15 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
 
 - (void)hide
 {
-//    UINavigationBar *navBar = self.navigationController.navigationBar;
-//    NSInteger navBarHeight = navBar.frame.size.height;
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    NSInteger navBarHeight = navBar.frame.size.height;
     NSInteger rows = (self.menuItems.count+4-1)/4;
     NSInteger height = (rows * kCellSize) + (rows * kCellPad);
     
-//    if (![UIApplication sharedApplication].statusBarHidden){
-//        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-//        navBarHeight += statusBarHeight;
-//    }
+    if (![UIApplication sharedApplication].statusBarHidden){
+        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+        navBarHeight += statusBarHeight;
+    }
     
     //Animate popup
     [UIView animateWithDuration:0.3
@@ -181,6 +172,15 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
         insetForSectionAtIndex:(NSInteger)section
 {
     return UIEdgeInsetsMake(kCellPad, kCellPad, kCellPad, kCellPad);
+}
+
+#pragma mark - UICollection Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.selectedBlock) {
+        self.selectedBlock(indexPath);
+    }
 }
 
 @end
