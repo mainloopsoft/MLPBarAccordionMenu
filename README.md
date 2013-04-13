@@ -11,36 +11,8 @@ UICollectionView.
 
 Usage
 ---------
-Add the _MLPBarAccordionMenu_ header and implementation file to your project. (.h & .m). QuartzCore is required too.
 
-After doing that, create a menu instance with items, like this:
-
-`MLPMenuItem *calendar = [[MLPMenuItem alloc] init];
-calendar.icon = [UIImage imageNamed:@"calendar_32x32"];
-calendar.title = @"Calendar";
-
-   MLPMenuItem *camera = [[MLPMenuItem alloc] init];
-    camera.icon = [UIImage imageNamed:@"camera_32x32"];
-    camera.title = @"Camera";
-
-    MLPMenuItem *cloud = [[MLPMenuItem alloc] init];
-    cloud.icon = [UIImage imageNamed:@"cloud_32x20"];
-    cloud.title = @"Cloud";
-`
-`   
-    MLPMenuItem *refresh = [[MLPMenuItem alloc] init];
-    refresh.icon = [UIImage imageNamed:@"loop_32x32"];
-    refresh.title = @"Refresh";
-`
-`
-    menu = [[MLPBarAccordionMenu alloc] initWithItems:@[calendar, camera, cloud, refresh]];
-`
-
-Then attach an action from a navigation item and call:
-
-`[menu toggleInView:<view to push>];`
-
-The view to push is the view between the navigation bar and where the menu will appear.
+http://www.mainloop.co/2013/04/mlpbaraccordionmenu/
 
 License
 --------
