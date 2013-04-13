@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B74F8881718AC3600BE5F87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B74F8871718AC3600BE5F87 /* UIKit.framework */; };
+		3B74F88A1718AC3600BE5F87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B74F8891718AC3600BE5F87 /* Foundation.framework */; };
+		3B74F88C1718AC3600BE5F87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B74F88B1718AC3600BE5F87 /* CoreGraphics.framework */; };
+		3B74F8921718AC3600BE5F87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8901718AC3600BE5F87 /* InfoPlist.strings */; };
+		3B74F8941718AC3600BE5F87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8931718AC3600BE5F87 /* main.m */; };
+		3B74F8981718AC3600BE5F87 /* MLPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8971718AC3600BE5F87 /* MLPAppDelegate.m */; };
+		3B74F89A1718AC3600BE5F87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8991718AC3600BE5F87 /* Default.png */; };
+		3B74F89C1718AC3600BE5F87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F89B1718AC3600BE5F87 /* Default@2x.png */; };
+		3B74F89E1718AC3600BE5F87 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F89D1718AC3600BE5F87 /* Default-568h@2x.png */; };
+		3B74F8A51718AC5000BE5F87 /* MLPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8A41718AC5000BE5F87 /* MLPViewController.xib */; };
+		3B74F8B31718BF5500BE5F87 /* MLPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8B21718BF5500BE5F87 /* MLPViewController.m */; };
+		3B74F8D117190E6A00BE5F87 /* MLPBarAccordionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8C717190E6A00BE5F87 /* MLPBarAccordionCell.m */; };
+		3B74F8D217190E6A00BE5F87 /* MLPBarAccordionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8C817190E6A00BE5F87 /* MLPBarAccordionCell.xib */; };
+		3B74F8D317190E6A00BE5F87 /* MLPBarAccordionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8CA17190E6A00BE5F87 /* MLPBarAccordionMenu.m */; };
+		3B74F8D417190E6A00BE5F87 /* MLPMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8CC17190E6A00BE5F87 /* MLPMenuItem.m */; };
+		3B74F8D9171914B400BE5F87 /* calendar_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D5171914B400BE5F87 /* calendar_32x32.png */; };
+		3B74F8DA171914B400BE5F87 /* camera_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D6171914B400BE5F87 /* camera_32x32.png */; };
+		3B74F8DB171914B400BE5F87 /* cloud_32x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D7171914B400BE5F87 /* cloud_32x20.png */; };
+		3B74F8DC171914B400BE5F87 /* loop_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D8171914B400BE5F87 /* loop_32x32.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B74F8841718AC3600BE5F87 /* MLPBarAccordionMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLPBarAccordionMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B74F8871718AC3600BE5F87 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B74F8891718AC3600BE5F87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B74F88B1718AC3600BE5F87 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B74F88F1718AC3600BE5F87 /* MLPBarAccordionMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MLPBarAccordionMenu-Info.plist"; sourceTree = "<group>"; };
+		3B74F8911718AC3600BE5F87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B74F8931718AC3600BE5F87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B74F8951718AC3600BE5F87 /* MLPBarAccordionMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLPBarAccordionMenu-Prefix.pch"; sourceTree = "<group>"; };
+		3B74F8961718AC3600BE5F87 /* MLPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPAppDelegate.h; sourceTree = "<group>"; };
+		3B74F8971718AC3600BE5F87 /* MLPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPAppDelegate.m; sourceTree = "<group>"; };
+		3B74F8991718AC3600BE5F87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3B74F89B1718AC3600BE5F87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3B74F89D1718AC3600BE5F87 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3B74F8A41718AC5000BE5F87 /* MLPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLPViewController.xib; sourceTree = "<group>"; };
+		3B74F8B11718BF5500BE5F87 /* MLPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPViewController.h; sourceTree = "<group>"; };
+		3B74F8B21718BF5500BE5F87 /* MLPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPViewController.m; sourceTree = "<group>"; };
+		3B74F8C617190E6A00BE5F87 /* MLPBarAccordionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPBarAccordionCell.h; sourceTree = "<group>"; };
+		3B74F8C717190E6A00BE5F87 /* MLPBarAccordionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPBarAccordionCell.m; sourceTree = "<group>"; };
+		3B74F8C817190E6A00BE5F87 /* MLPBarAccordionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLPBarAccordionCell.xib; sourceTree = "<group>"; };
+		3B74F8C917190E6A00BE5F87 /* MLPBarAccordionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPBarAccordionMenu.h; sourceTree = "<group>"; };
+		3B74F8CA17190E6A00BE5F87 /* MLPBarAccordionMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPBarAccordionMenu.m; sourceTree = "<group>"; };
+		3B74F8CB17190E6A00BE5F87 /* MLPMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPMenuItem.h; sourceTree = "<group>"; };
+		3B74F8CC17190E6A00BE5F87 /* MLPMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPMenuItem.m; sourceTree = "<group>"; };
+		3B74F8D5171914B400BE5F87 /* calendar_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_32x32.png; sourceTree = "<group>"; };
+		3B74F8D6171914B400BE5F87 /* camera_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_32x32.png; sourceTree = "<group>"; };
+		3B74F8D7171914B400BE5F87 /* cloud_32x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_32x20.png; sourceTree = "<group>"; };
+		3B74F8D8171914B400BE5F87 /* loop_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loop_32x32.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B74F8811718AC3600BE5F87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B74F8881718AC3600BE5F87 /* UIKit.framework in Frameworks */,
+				3B74F88A1718AC3600BE5F87 /* Foundation.framework in Frameworks */,
+				3B74F88C1718AC3600BE5F87 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B74F87B1718AC3600BE5F87 = {
+			isa = PBXGroup;
+			children = (
+				3B74F88D1718AC3600BE5F87 /* MLPBarAccordionMenu */,
+				3B74F8861718AC3600BE5F87 /* Frameworks */,
+				3B74F8851718AC3600BE5F87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B74F8851718AC3600BE5F87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B74F8841718AC3600BE5F87 /* MLPBarAccordionMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B74F8861718AC3600BE5F87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B74F8871718AC3600BE5F87 /* UIKit.framework */,
+				3B74F8891718AC3600BE5F87 /* Foundation.framework */,
+				3B74F88B1718AC3600BE5F87 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B74F88D1718AC3600BE5F87 /* MLPBarAccordionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3B74F8C017190E6A00BE5F87 /* Images */,
+				3B74F8C517190E6A00BE5F87 /* MLPBarAccordionMenu */,
+				3B74F8961718AC3600BE5F87 /* MLPAppDelegate.h */,
+				3B74F8971718AC3600BE5F87 /* MLPAppDelegate.m */,
+				3B74F8B11718BF5500BE5F87 /* MLPViewController.h */,
+				3B74F8B21718BF5500BE5F87 /* MLPViewController.m */,
+				3B74F8A41718AC5000BE5F87 /* MLPViewController.xib */,
+				3B74F88E1718AC3600BE5F87 /* Supporting Files */,
+			);
+			path = MLPBarAccordionMenu;
+			sourceTree = "<group>";
+		};
+		3B74F88E1718AC3600BE5F87 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B74F88F1718AC3600BE5F87 /* MLPBarAccordionMenu-Info.plist */,
+				3B74F8901718AC3600BE5F87 /* InfoPlist.strings */,
+				3B74F8931718AC3600BE5F87 /* main.m */,
+				3B74F8951718AC3600BE5F87 /* MLPBarAccordionMenu-Prefix.pch */,
+				3B74F8991718AC3600BE5F87 /* Default.png */,
+				3B74F89B1718AC3600BE5F87 /* Default@2x.png */,
+				3B74F89D1718AC3600BE5F87 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B74F8C017190E6A00BE5F87 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3B74F8D5171914B400BE5F87 /* calendar_32x32.png */,
+				3B74F8D6171914B400BE5F87 /* camera_32x32.png */,
+				3B74F8D7171914B400BE5F87 /* cloud_32x20.png */,
+				3B74F8D8171914B400BE5F87 /* loop_32x32.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3B74F8C517190E6A00BE5F87 /* MLPBarAccordionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3B74F8C617190E6A00BE5F87 /* MLPBarAccordionCell.h */,
+				3B74F8C717190E6A00BE5F87 /* MLPBarAccordionCell.m */,
+				3B74F8C817190E6A00BE5F87 /* MLPBarAccordionCell.xib */,
+				3B74F8C917190E6A00BE5F87 /* MLPBarAccordionMenu.h */,
+				3B74F8CA17190E6A00BE5F87 /* MLPBarAccordionMenu.m */,
+				3B74F8CB17190E6A00BE5F87 /* MLPMenuItem.h */,
+				3B74F8CC17190E6A00BE5F87 /* MLPMenuItem.m */,
+			);
+			path = MLPBarAccordionMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B74F8831718AC3600BE5F87 /* MLPBarAccordionMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B74F8A11718AC3600BE5F87 /* Build configuration list for PBXNativeTarget "MLPBarAccordionMenu" */;
+			buildPhases = (
+				3B74F8801718AC3600BE5F87 /* Sources */,
+				3B74F8811718AC3600BE5F87 /* Frameworks */,
+				3B74F8821718AC3600BE5F87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLPBarAccordionMenu;
+			productName = MLPBarAccordionMenu;
+			productReference = 3B74F8841718AC3600BE5F87 /* MLPBarAccordionMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B74F87C1718AC3600BE5F87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MLP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Mainloop LLC";
+			};
+			buildConfigurationList = 3B74F87F1718AC3600BE5F87 /* Build configuration list for PBXProject "MLPBarAccordionMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B74F87B1718AC3600BE5F87;
+			productRefGroup = 3B74F8851718AC3600BE5F87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B74F8831718AC3600BE5F87 /* MLPBarAccordionMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B74F8821718AC3600BE5F87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B74F8921718AC3600BE5F87 /* InfoPlist.strings in Resources */,
+				3B74F89A1718AC3600BE5F87 /* Default.png in Resources */,
+				3B74F89C1718AC3600BE5F87 /* Default@2x.png in Resources */,
+				3B74F89E1718AC3600BE5F87 /* Default-568h@2x.png in Resources */,
+				3B74F8A51718AC5000BE5F87 /* MLPViewController.xib in Resources */,
+				3B74F8D217190E6A00BE5F87 /* MLPBarAccordionCell.xib in Resources */,
+				3B74F8D9171914B400BE5F87 /* calendar_32x32.png in Resources */,
+				3B74F8DA171914B400BE5F87 /* camera_32x32.png in Resources */,
+				3B74F8DB171914B400BE5F87 /* cloud_32x20.png in Resources */,
+				3B74F8DC171914B400BE5F87 /* loop_32x32.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B74F8801718AC3600BE5F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B74F8941718AC3600BE5F87 /* main.m in Sources */,
+				3B74F8981718AC3600BE5F87 /* MLPAppDelegate.m in Sources */,
+				3B74F8B31718BF5500BE5F87 /* MLPViewController.m in Sources */,
+				3B74F8D117190E6A00BE5F87 /* MLPBarAccordionCell.m in Sources */,
+				3B74F8D317190E6A00BE5F87 /* MLPBarAccordionMenu.m in Sources */,
+				3B74F8D417190E6A00BE5F87 /* MLPMenuItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B74F8901718AC3600BE5F87 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B74F8911718AC3600BE5F87 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B74F89F1718AC3600BE5F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B74F8A01718AC3600BE5F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B74F8A21718AC3600BE5F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MLPBarAccordionMenu/MLPBarAccordionMenu-Prefix.pch";
+				INFOPLIST_FILE = "MLPBarAccordionMenu/MLPBarAccordionMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B74F8A31718AC3600BE5F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MLPBarAccordionMenu/MLPBarAccordionMenu-Prefix.pch";
+				INFOPLIST_FILE = "MLPBarAccordionMenu/MLPBarAccordionMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B74F87F1718AC3600BE5F87 /* Build configuration list for PBXProject "MLPBarAccordionMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B74F89F1718AC3600BE5F87 /* Debug */,
+				3B74F8A01718AC3600BE5F87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B74F8A11718AC3600BE5F87 /* Build configuration list for PBXNativeTarget "MLPBarAccordionMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B74F8A21718AC3600BE5F87 /* Debug */,
+				3B74F8A31718AC3600BE5F87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B74F87C1718AC3600BE5F87 /* Project object */;
+}
