@@ -8,7 +8,6 @@
 
 #import "MLPViewController.h"
 #import "MLPBarAccordionMenu.h"
-#import "MLPMenuItem.h"
 
 @interface MLPViewController ()
 {
@@ -31,21 +30,21 @@
 {
     [super viewDidLoad];
     
-    MLPMenuItem *calendar = [[MLPMenuItem alloc] init];
+    MLPBarAccordionMenuItem *calendar = [[MLPBarAccordionMenuItem alloc] init];
     calendar.icon = [UIImage imageNamed:@"calendar_32x32"];
     calendar.title = @"Calendar";
     
     
-    MLPMenuItem *camera = [[MLPMenuItem alloc] init];
+    MLPBarAccordionMenuItem *camera = [[MLPBarAccordionMenuItem alloc] init];
     camera.icon = [UIImage imageNamed:@"camera_32x32"];
     camera.title = @"Camera";
     
     
-    MLPMenuItem *cloud = [[MLPMenuItem alloc] init];
+    MLPBarAccordionMenuItem *cloud = [[MLPBarAccordionMenuItem alloc] init];
     cloud.icon = [UIImage imageNamed:@"cloud_32x20"];
     cloud.title = @"Cloud";
     
-    MLPMenuItem *refresh = [[MLPMenuItem alloc] init];
+    MLPBarAccordionMenuItem *refresh = [[MLPBarAccordionMenuItem alloc] init];
     refresh.icon = [UIImage imageNamed:@"loop_32x32"];
     refresh.title = @"Refresh";
     
@@ -62,7 +61,7 @@
 
 - (IBAction)didSelectToggleButton:(id)sender {
 
-    [menu toggleInView:self.topView];
+    [menu toggleBetweenNavigationBar:self.navigationController andView:self.topView];
 }
 
 @end

@@ -21,7 +21,6 @@
 		3B74F8D117190E6A00BE5F87 /* MLPBarAccordionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8C717190E6A00BE5F87 /* MLPBarAccordionCell.m */; };
 		3B74F8D217190E6A00BE5F87 /* MLPBarAccordionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8C817190E6A00BE5F87 /* MLPBarAccordionCell.xib */; };
 		3B74F8D317190E6A00BE5F87 /* MLPBarAccordionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8CA17190E6A00BE5F87 /* MLPBarAccordionMenu.m */; };
-		3B74F8D417190E6A00BE5F87 /* MLPMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B74F8CC17190E6A00BE5F87 /* MLPMenuItem.m */; };
 		3B74F8D9171914B400BE5F87 /* calendar_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D5171914B400BE5F87 /* calendar_32x32.png */; };
 		3B74F8DA171914B400BE5F87 /* camera_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D6171914B400BE5F87 /* camera_32x32.png */; };
 		3B74F8DB171914B400BE5F87 /* cloud_32x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D7171914B400BE5F87 /* cloud_32x20.png */; };
@@ -50,8 +49,6 @@
 		3B74F8C817190E6A00BE5F87 /* MLPBarAccordionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLPBarAccordionCell.xib; sourceTree = "<group>"; };
 		3B74F8C917190E6A00BE5F87 /* MLPBarAccordionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPBarAccordionMenu.h; sourceTree = "<group>"; };
 		3B74F8CA17190E6A00BE5F87 /* MLPBarAccordionMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPBarAccordionMenu.m; sourceTree = "<group>"; };
-		3B74F8CB17190E6A00BE5F87 /* MLPMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPMenuItem.h; sourceTree = "<group>"; };
-		3B74F8CC17190E6A00BE5F87 /* MLPMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPMenuItem.m; sourceTree = "<group>"; };
 		3B74F8D5171914B400BE5F87 /* calendar_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_32x32.png; sourceTree = "<group>"; };
 		3B74F8D6171914B400BE5F87 /* camera_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_32x32.png; sourceTree = "<group>"; };
 		3B74F8D7171914B400BE5F87 /* cloud_32x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_32x20.png; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 				3B74F8C817190E6A00BE5F87 /* MLPBarAccordionCell.xib */,
 				3B74F8C917190E6A00BE5F87 /* MLPBarAccordionMenu.h */,
 				3B74F8CA17190E6A00BE5F87 /* MLPBarAccordionMenu.m */,
-				3B74F8CB17190E6A00BE5F87 /* MLPMenuItem.h */,
-				3B74F8CC17190E6A00BE5F87 /* MLPMenuItem.m */,
 			);
 			path = MLPBarAccordionMenu;
 			sourceTree = "<group>";
@@ -230,7 +225,6 @@
 				3B74F8B31718BF5500BE5F87 /* MLPViewController.m in Sources */,
 				3B74F8D117190E6A00BE5F87 /* MLPBarAccordionCell.m in Sources */,
 				3B74F8D317190E6A00BE5F87 /* MLPBarAccordionMenu.m in Sources */,
-				3B74F8D417190E6A00BE5F87 /* MLPMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

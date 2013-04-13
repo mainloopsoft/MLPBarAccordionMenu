@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@interface MLPBarAccordionMenuItem : NSObject
+
+@property (nonatomic, strong) UIImage *icon;
+@property (nonatomic, strong) NSString *title;
+
+@end
+
+
 @interface MLPBarAccordionMenu : UICollectionView<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSArray *menuItems;
@@ -16,5 +24,7 @@
 
 - (id)initWithDelegate:(id<UICollectionViewDelegate>)delegate;
 
-- (void)toggleInView:(UIView*)view;
+- (void)toggleBetweenNavigationBar:(UINavigationController*)navigationController andView:(UIView*)view;
+
+- (void)hide;
 @end

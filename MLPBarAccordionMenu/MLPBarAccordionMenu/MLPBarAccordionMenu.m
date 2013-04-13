@@ -8,13 +8,23 @@
 
 #import "MLPBarAccordionMenu.h"
 #import "MLPBarAccordionCell.h"
-#import "MLPMenuItem.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define kCellSize 70
 #define kCellPad 4
 
 static NSString *cellIdentifier = @"MLPBarAccordionCell";
+
+@implementation MLPBarAccordionMenuItem
+
+@end
+
+@interface MLPBarAccordionMenu()
+
+@property (nonatomic, strong) UINavigationController *navigationController;
+@property (nonatomic, strong) UIView *view;
+
+@end
 
 @implementation MLPBarAccordionMenu
 
@@ -59,42 +69,41 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
     return self;
 }
 
-- (void)toggleInView:(UIView*)view
+- (void)toggleBetweenNavigationBar:(UINavigationController*)navigationController andView:(UIView*)view
 {
     if (self.superview != nil) {
-        [self hideView:view];
+        [self hide];
     }else{
-        [self showInView:view];
+        [self showBetweenNavigationBar:navigationController andView:view];
     }
 }
 
-- (void)showInView:(UIView*)topView
+- (void)showBetweenNavigationBar:(UINavigationController*)navigationController andView:(UIView*)view
 {
+    self.navigationController = navigationController;
+    self.view = view;
     
-    UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    NSAssert([viewController isKindOfClass:[UINavigationController class]], @"You must add a navigation controller");
-    
-    UINavigationController *navController = (UINavigationController*)viewController;
-    UINavigationBar *navBar = navController.navigationBar;
+    UINavigationBar *navBar = navigationController.navigationBar;
     NSInteger navBarHeight = navBar.frame.size.height;
-    NSInteger rows = (self.menuItems.count * kCellSize)%4;
-    NSInteger height = ((rows == 0 ? 1 : rows)* kCellSize) + (rows * kCellPad);
+    NSInteger rows = (self.menuItems.count+4-1)/4;
+    NSInteger height = (rows * kCellSize) + (rows * kCellPad);
+    
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     
-    if (![UIApplication sharedApplication].statusBarHidden){
-        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-        navBarHeight += statusBarHeight;
-    }
+//    if (![UIApplication sharedApplication].statusBarHidden){
+//        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+//        navBarHeight += statusBarHeight;
+//    }
     
     self.frame = CGRectMake(0, -height + navBarHeight, screenWidth, height);
-    [navController.view insertSubview:self belowSubview:navController.navigationBar];
+    [navigationController.view insertSubview:self belowSubview:navBar];
     
     
     //Animate popup
     [UIView animateWithDuration:0.3
                      animations:^{
-                         topView.frame = CGRectApplyAffineTransform(topView.frame, CGAffineTransformMakeTranslation(0, height));
+                         view.frame = CGRectApplyAffineTransform(view.frame, CGAffineTransformMakeTranslation(0, height));
                          self.frame = CGRectApplyAffineTransform(self.frame, CGAffineTransformMakeTranslation(0, height));
                          
                      }
@@ -104,36 +113,33 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
                      }];
 }
 
-- (void)hideView:(UIView*)topView
+- (void)hide
 {
-    UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    NSAssert([viewController isKindOfClass:[UINavigationController class]], @"You must add a navigation controller");
+//    UINavigationBar *navBar = self.navigationController.navigationBar;
+//    NSInteger navBarHeight = navBar.frame.size.height;
+    NSInteger rows = (self.menuItems.count+4-1)/4;
+    NSInteger height = (rows * kCellSize) + (rows * kCellPad);
     
-    UINavigationController *navController = (UINavigationController*)viewController;
-    UINavigationBar *navBar = navController.navigationBar;
-    NSInteger navBarHeight = navBar.frame.size.height;
-    NSInteger rows = (self.menuItems.count * kCellSize)%4;
-    NSInteger height = ((rows == 0 ? 1 : rows)* kCellSize) + (rows * kCellPad);
-    
-    if (![UIApplication sharedApplication].statusBarHidden){
-        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-        navBarHeight += statusBarHeight;
-    }
+//    if (![UIApplication sharedApplication].statusBarHidden){
+//        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+//        navBarHeight += statusBarHeight;
+//    }
     
     //Animate popup
     [UIView animateWithDuration:0.3
                      animations:^{
-                         topView.frame = CGRectApplyAffineTransform(topView.frame, CGAffineTransformMakeTranslation(0, -height));
+                         self.view.frame = CGRectApplyAffineTransform(self.view.frame, CGAffineTransformMakeTranslation(0, -height));
                          self.frame = CGRectApplyAffineTransform(self.frame, CGAffineTransformMakeTranslation(0, -height));
                          
                      }
                      completion:^(BOOL finished){
                          if(finished){
                              [self removeFromSuperview];
+                             self.navigationController = nil;
+                             self.view = nil;
                          }
                      }];
 }
-
 
 #pragma mark - DataSource Methods
 
@@ -147,7 +153,7 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
 {
     MLPBarAccordionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    MLPMenuItem *item = [self.menuItems objectAtIndex:indexPath.row];
+    MLPBarAccordionMenuItem *item = [self.menuItems objectAtIndex:indexPath.row];
     cell.iconImageView.image = item.icon;
     cell.titleLabel.text = item.title;
     
