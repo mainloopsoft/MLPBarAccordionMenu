@@ -106,30 +106,36 @@ static NSString *cellIdentifier = @"MLPBarAccordionCell";
 
 - (void)hide
 {
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    NSInteger navBarHeight = navBar.frame.size.height;
-    NSInteger rows = (self.menuItems.count+4-1)/4;
-    NSInteger height = (rows * kCellSize) + (rows * kCellPad);
-    
-    if (![UIApplication sharedApplication].statusBarHidden){
-        NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-        navBarHeight += statusBarHeight;
-    }
-    
-    //Animate popup
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         self.view.frame = CGRectApplyAffineTransform(self.view.frame, CGAffineTransformMakeTranslation(0, -height));
-                         self.frame = CGRectApplyAffineTransform(self.frame, CGAffineTransformMakeTranslation(0, -height));
-                         
-                     }
-                     completion:^(BOOL finished){
-                         if(finished){
-                             [self removeFromSuperview];
-                             self.navigationController = nil;
-                             self.view = nil;
+    if (self.view != nil && self.navigationController != nil) {
+        UIView *view = self.view;
+        UINavigationController *navigationController = self.navigationController;
+        
+        self.navigationController = nil;
+        self.view = nil;
+        
+        UINavigationBar *navBar = navigationController.navigationBar;
+        NSInteger navBarHeight = navBar.frame.size.height;
+        NSInteger rows = (self.menuItems.count+4-1)/4;
+        NSInteger height = (rows * kCellSize) + (rows * kCellPad);
+        
+        if (![UIApplication sharedApplication].statusBarHidden){
+            NSInteger statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+            navBarHeight += statusBarHeight;
+        }
+        
+        //Animate popup
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             view.frame = CGRectApplyAffineTransform(view.frame, CGAffineTransformMakeTranslation(0, -height));
+                             self.frame = CGRectApplyAffineTransform(self.frame, CGAffineTransformMakeTranslation(0, -height));
+                             
                          }
-                     }];
+                         completion:^(BOOL finished){
+                             if(finished){
+                                 [self removeFromSuperview];
+                             }
+                         }];
+    }
 }
 
 #pragma mark - DataSource Methods
