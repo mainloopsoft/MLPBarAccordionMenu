@@ -25,6 +25,7 @@
 		3B74F8DA171914B400BE5F87 /* camera_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D6171914B400BE5F87 /* camera_32x32.png */; };
 		3B74F8DB171914B400BE5F87 /* cloud_32x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D7171914B400BE5F87 /* cloud_32x20.png */; };
 		3B74F8DC171914B400BE5F87 /* loop_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B74F8D8171914B400BE5F87 /* loop_32x32.png */; };
+		3B93D088174EA7BA00642BD5 /* nav-arrow-down-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B93D087174EA7B900642BD5 /* nav-arrow-down-icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		3B74F8D6171914B400BE5F87 /* camera_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_32x32.png; sourceTree = "<group>"; };
 		3B74F8D7171914B400BE5F87 /* cloud_32x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_32x20.png; sourceTree = "<group>"; };
 		3B74F8D8171914B400BE5F87 /* loop_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loop_32x32.png; sourceTree = "<group>"; };
+		3B93D087174EA7B900642BD5 /* nav-arrow-down-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-arrow-down-icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		3B74F8C517190E6A00BE5F87 /* MLPBarAccordionMenu */ = {
 			isa = PBXGroup;
 			children = (
+				3B93D087174EA7B900642BD5 /* nav-arrow-down-icon@2x.png */,
 				3B74F8C617190E6A00BE5F87 /* MLPBarAccordionCell.h */,
 				3B74F8C717190E6A00BE5F87 /* MLPBarAccordionCell.m */,
 				3B74F8C817190E6A00BE5F87 /* MLPBarAccordionCell.xib */,
@@ -210,6 +213,7 @@
 				3B74F8DA171914B400BE5F87 /* camera_32x32.png in Resources */,
 				3B74F8DB171914B400BE5F87 /* cloud_32x20.png in Resources */,
 				3B74F8DC171914B400BE5F87 /* loop_32x32.png in Resources */,
+				3B93D088174EA7BA00642BD5 /* nav-arrow-down-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +345,7 @@
 				3B74F8A31718AC3600BE5F87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

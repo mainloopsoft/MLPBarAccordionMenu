@@ -57,7 +57,8 @@
     };
     
     menu.selectedBlock = block;
-    [self.navigationItem setRightBarButtonItem:self.toggleButton];
+    menu.barButton = [menu barButtonItemWithImage:[UIImage  imageNamed:@"nav-arrow-down-icon"] target:self action:@selector(didSelectToggleButton:)];
+    [self.navigationItem setRightBarButtonItem:menu.barButton];
 }
 
 - (void)didReceiveMemoryWarning
